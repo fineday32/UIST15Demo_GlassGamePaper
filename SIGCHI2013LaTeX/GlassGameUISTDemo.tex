@@ -134,37 +134,41 @@ In our work, we want to explore the game design on smart glasses. We choose goog
 
 After analyzing users feedback, we found google glass has ``limited control'' issue. Compared to other gaming platform, there is no effective powerful input such as mouse, keyboard, joystick or touch screen. However, there are some non-traditional gaming input such as camera, small touch pad, microphone, gyroscope, and accelerometer. How to use these new control in glass game design is still an open question for people to discuss and explore. 
 
-After user study, we found that about one third of users want to play First-Person Shooter(FPS) game on google glass. So we decide to implement a FPS game on google glass for demonstration. In addition, we also provide multiple control styles to explore glass game design space and understand user preference.
+After user study, we found that about one third of users want to play First-Person Shooter(FPS) game on google glass. So we decide to implement a FPS game,``Glass Shooter'', on google glass for demonstration. In addition, we also provide multiple control styles to explore glass game design space and understand user preference.
 
 %Eyewear computers, such as google glasses implementation, are claimed to be the next evolution beyond smartphones. In addition, game industry in the US earned about 21.53 dollars in 2014\cite{essentialfacts}. Recent statistics show that around 70-80\% of all mobile downloads is composed of mobile games\cite{statistics,infographic}. Traditional game design has tons of guidelines\cite{videogame,mobilegame,bodygame,gameflow,argame,wearable}. However, the game design for smart glass game is still an unexplored area. Hence, we want to explore the game design space on smart glass. And after concerning current market share, we choose Google Glass as our candidate.
 
 %First we want to realize the current game play experience on google glass, so we recruited 24 users to play existing google glass game\cite{minigame} with different content or control style. After user study, we found that about one third of users want to play First-Person Shooter(FPS) game on google glass. So we decide to implement a FPS game on google glass for demonstration. In addition, we also provide multiple control styles to evaluate and find out the best control way on google glass. 
 
-\section{How to Play}
-In order to evaluate which playing way is the best for glass gameplay experience. We divide them into ``Only Glass'' and ``Play with Controller'' and analyze them in detail.
+\section{Game Control Style}
+In order to get deeper understanding of glass game design, we implement a game by ourself, which called ``Glass Shooter''. so that we can have some control variable to change directly by ourselves and compare with different settings. We also include smart phone as controller for our game designs and control scheme. We present 3 different control style, but they are not completely conflict with each other, player can just use them together or siwtch between each style. We described the control style below. 
 
-\subsection{Only Glass}
-About discussing how to make control in our game, first we just focus on google glass itself. By using the strip touchpad on the right side of google glass, player can move forward by pressing the front side of touchpad. By contrast, players also can move back by pressing the back side of touchpad. And by tapping on touchpad, player can shoot their weapon, such as gun or hand grenade.
+
+\subsection{Glass Control}
+First we just focus on google glass itself. In glass control, viewport is controlled by head orentation. By using the strip touchpad on the right side of google glass, player can move forward by pressing the front side of touchpad. By contrast, players also can move back by pressing the back side of touchpad. Scroll the touchpad can also change the viewport direction, to avoid big degree of head rotation. Player can use left tilt and right tilt to move left and right. And by tapping on touchpad, player can fire their weapon, such as gun or hand grenade. Finger slide
 
 \subsection{Play with Controller}
-Nowadays, smart phones have become a must-have in people's lives. So we design to use smart phone as game controller to control the avatar and scene in our game. We analyze them in 4 categories as below.
+We design to use smart phone as game controller. Reference to traditional gamepad controller, there are two joysticks on the phone, left one control player movement, right one rotate the viewport direction. Player can tap anywhere to fire the current weapon. In this case, player can still use head orientation to control viewport.
 
-\subsubsection{Phone aiming}
+\subsection{Play with Metaphor}
+To explore interaction between glass and phone, we also tried several experimental control with metaphor. Like hold your phone like a hand gun ,manipulate the phone orientation to aim the target and fire the gun by using index finger sliding the touch screen. Another metaphor is holding your phone as a hand grenade, player can use throw gesture to throw out the grenade. We also implement holding knife metaphor, player can brandish their phone to perform brandish knife attack.
+
+%\subsubsection{Phone aiming}
 % Aiming by using smart phone as a gun
-By using both of our hands, we can hold the smart phone with the same posture as we hold a gun. With this pose, we can switch our angle of view by revolving our body. And by using gyro, we can aim the target or the enemy by trimming our smart phone to shoot precisely. In other words, we can use smart phone as a aiming device, such as players using an electric torch or a gun.
+%By using both of our hands, we can hold the smart phone with the same posture as we hold a gun. With this pose, we can switch our angle of view by revolving our body. And by using gyro, we can aim the target or the enemy by trimming our smart phone to shoot precisely. In other words, we can use smart phone as a aiming device, such as players using an electric torch or a gun.
 
-\subsubsection{Thrower}
+%\subsubsection{Thrower}
 % Using smart phone as body motion sensing
-Take Nintendo Wii for example, players movement can be detected precisely by the sensor. Although google glass can't have as strong sensor as Nintendo Wii, we still can detect some players' movement by our controller, smar phone. For instance, players hold the smart phone and can do throwing motion to simulate as throwing the hand grenade, and can make waving motion as waving the knife, and so on.
+%Take Nintendo Wii for example, players movement can be detected precisely by the sensor. Although google glass can't have as strong sensor as Nintendo Wii, we still can detect some players' movement by our controller, smar phone. For instance, players hold the smart phone and can do throwing motion to simulate as throwing the hand grenade, and can make waving motion as waving the knife, and so on.
 
-\subsubsection{Driving simulation}
-While player driving the car, player use controller to emulate their motion as driving the car. It can indead raise players' game play experience greatly. So we can hold our controller, smart phone, as a steering wheel by both user's hand, and revolving the smart phone to emulate turning of the steering wheel.
+%\subsubsection{Driving simulation}
+%While player driving the car, player use controller to emulate their motion as driving the car. It can indead raise players' game play experience greatly. So we can hold our controller, smart phone, as a steering wheel by both user's hand, and revolving the smart phone to emulate turning of the steering wheel.
 
-\subsubsection{Traditional joystick}
-To compare various of control method, we also provide traditional joystick for players on our controller, smart phone. By using traditional joystick, players can turning their angle of view and move their position directily.
+%\subsubsection{Traditional joystick}
+%To compare various of control method, we also provide traditional joystick for players on our controller, smart phone. By using traditional joystick, players can turning their angle of view and move their position directily.
 
 \section{Conclusion}
-In this demostration, we presented a first-person shooter game based on our user feedback from existing glass games. In order to determine the glass gaming controll, which still an open question nowadays, so we implemented multiple control styles; (a) Phone aiming; (b) Thrower; (c) Driving simulation; (d) Traditional joystick. And trying to find out and evaluate which type of control style is the most suitable for glass game. With better gaming control, we belive that it can enhance glass game play experience significantly than before, and we also hope to be able to inspire more exploration of smart glass gaming and spread game entertainment for more people.
+In this demostration, we presented a first-person shooter game based on our user feedback from existing glass games. In order to explore the glass gaming control, which still an open question nowadays, so we designed and implemented multiple control styles; (a) Glass Control; (b) Play with Controller; (c) Play with Metaphor; We hope to inspire more glass game developer to develope more intuitive and suitable control. With better gaming control, we belive that it can enhance glass game play experience significantly than before, and we also hope to be able to inspire more exploration of smart glass gaming and spread game entertainment for more people.
 
 
 \section{Acknowledgements}
